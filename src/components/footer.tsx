@@ -19,7 +19,7 @@ export default function Footer() {
                     className="text-white text-base hover:text-slate-300 cursor-pointer transition-colors duration-300"
                 />
             </small>
-            <small className="px-6 sm:px-6 ">About this website: built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS.</small>
+            <small className="hidden sm:block ">About this website: built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS.</small>
         </footer>
     )
 }
