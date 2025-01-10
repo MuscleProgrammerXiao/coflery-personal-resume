@@ -1,9 +1,27 @@
+
+import { headerLanguageMap } from "@/lib/data"
+import SectionHeading from "./sectionHeading"
+import { AiFillQqCircle } from "react-icons/ai";
+import { FaSquareShareNodes } from "react-icons/fa6";
+import { contactMe } from "@/lib/data";
 export default function BasicInfo() {
     return (
         <div className="py-14 bg-stone-200">
             <div className="max-w-[780px] mx-auto flex flex-col min-h-5 text-zinc-600 px-6 sm:px-4">
-                <h1 className="font-medium text-4xl text-gray-700 text-center sm:text-start">关于我</h1>
-                <p className="mt-4 leading-7">
+                <SectionHeading>
+                    {headerLanguageMap["About"]}
+                </SectionHeading>
+                <div className="flex">
+                    {
+                        contactMe.map((item) => (
+                            <div key={item.title}>
+                                <span>{item.icon}</span>
+                                <span>{item.value}</span>
+                            </div>
+                        ))
+                    }
+                </div>
+                <p className="leading-7">
                     你好，我叫任复衡，英文名Frand，今年27岁，来自四川。
                 </p>
                 <p className="mt-3 leading-7">
